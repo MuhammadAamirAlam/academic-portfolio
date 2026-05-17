@@ -106,7 +106,7 @@ function Profile() {
 
               <div>
                 <div className="butn-presv">
-                  <a href="#0" className="butn butn-md butn-bord radius-5 skew">
+                  <a href="/Muhammad_Aamir_Alam_CV.pdf" download="Muhammad_Aamir_Alam_CV.pdf" className="butn butn-md butn-bord radius-5 skew">
                     <span>Download CV</span>
                   </a>
                 </div>
