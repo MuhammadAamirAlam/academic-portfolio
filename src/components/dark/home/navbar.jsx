@@ -4,9 +4,14 @@ import { Link } from "react-scroll";
 function Navbar() {
   return (
     <nav className="navbar">
+      <style>{`
+        .navbar .navbar-nav .nav-item {
+          padding: 10px 12px !important; 
+        }
+      `}</style>
       <div className="row justify-content-end rest">
         <div className="col-lg-8 rest">
-          <ul className="navbar-nav main-bg d-flex justify-content-end" style={{ fontSize: "12px"}}>
+          <ul className="navbar-nav main-bg d-flex justify-content-right" style={{ fontSize: "10px"}}>
             <li className="nav-item">
               <Link to="home" spy={true} smooth={true}>
                 <span>Home</span>
