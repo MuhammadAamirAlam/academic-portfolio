@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import diploma1 from "../../../assets/certificates/vol1.webp";
 import diploma2 from "../../../assets/certificates/vol2.webp";
 import internship1 from "../../../assets/certificates/internship-1.webp";
-import internship2 from "../../../assets/certificates/internship-2.webp";
 import vol3 from "../../../assets/certificates/vol3.webp";
 import vol4 from "../../../assets/certificates/vol4.webp";
 import vol5 from "../../../assets/certificates/vol5.webp";
@@ -32,12 +31,6 @@ const categories = [
         title: "Web Development Internship",
         issuer: "Digital Empowerment Network",
         image: internship1,
-        link: null,
-      },
-      {
-        title: "Web Development Internship",
-        issuer: "CodeAlpha",
-        image: internship2,
         link: null,
       },
     ],

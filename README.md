@@ -10,4 +10,4 @@ A frontend developer portfolio showcasing academic achievements, verified creden
 - **Routing:** React Router v6, React Scroll
 
 ### Live Link
-🔗 [Live Demo](https://academic-portfolio-ruby.vercel.app)
+🔗 [Live Demo](https://academic-portfolio-ruby.vercel.app/)
