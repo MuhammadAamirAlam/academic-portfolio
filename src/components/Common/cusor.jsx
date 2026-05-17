@@ -73,13 +73,12 @@ function Cursor() {
   return (
     <>
       <style>{`
-        /* Double insurance: Hide the cursor immediately via CSS on touch devices and small viewports */
-        @media (pointer: coarse), (hover: none), (max-width: 991px) {
+        .cursor {
+          display: none !important;
+        }
+        @media (pointer: fine) {
           .cursor {
-            display: none !important;
-            visibility: hidden !important;
-            opacity: 0 !important;
-            pointer-events: none !important;
+            display: block !important;
           }
         }
       `}</style>
