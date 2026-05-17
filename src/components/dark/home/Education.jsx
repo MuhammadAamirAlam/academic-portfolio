@@ -61,6 +61,29 @@ function Education() {
           top: 20px;
           right: 20px;
         }
+        @media screen and (max-width: 767px) {
+  .edu-timeline-item .edu-year-badge {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin-bottom: 12px !important;
+    display: block !important;
+    width: fit-content !important;
+  }
+  .edu-logo {
+    margin-top: 12px !important;
+    margin-right: 12px !important;
+    margin-bottom: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .edu-timeline-item .row {
+    flex-direction: column !important;
+  }
+  .edu-timeline-item .col-auto {
+    width: 100% !important;
+  }
+}
         .edu-grade {
           background: transparent;
           border: 1px solid rgba(255,255,255,0.2);

@@ -3,6 +3,45 @@ import React from "react";
 function Profile() {
   return (
     <section id="home" className="intro-profile md-mb50">
+      <style>{`
+        /* Responsive fixes for medium and small screens (< 1200px) */
+        @media screen and (max-width: 1199px) {
+          .intro-profile .box-img,
+          .intro-profile .content {
+            width: 100% !important;
+            max-width: 100% !important;
+            flex: 0 0 100% !important;
+          }
+          .intro-profile .content:after {
+            display: none !important;
+          }
+          .intro-profile .box-img {
+            border-radius: 15px 15px 0 0 !important;
+            margin-bottom: 0 !important;
+            padding: 60px 30px 30px 30px !important;
+          }
+          .intro-profile .content {
+            border-radius: 0 0 15px 15px !important;
+            padding: 40px 30px 60px 30px !important;
+          }
+          .intro-profile .content h1 {
+            font-size: 34px !important;
+            line-height: 1.3 !important;
+          }
+          .intro-profile .content .stauts {
+            margin-top: 40px !important;
+          }
+        }
+        @media screen and (max-width: 575px) {
+          .intro-profile .content h1 {
+            font-size: 28px !important;
+          }
+          .intro-profile .box-img,
+          .intro-profile .content {
+            padding: 40px 20px !important;
+          }
+        }
+      `}</style>
       <div className="row rest">
         <div className="col-lg-4 box-img main-bg">
           <div className="cont valign">
