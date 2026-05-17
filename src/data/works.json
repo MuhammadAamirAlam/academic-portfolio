@@ -1,0 +1,16 @@
+[
+  {
+    "id": "mental-health-directory",
+    "photo": "/assets/imgs/works/1.jpg",
+    "title": "Mental Health Directory",
+    "tag": "Healthcare & Community Platform",
+    "link": "/project/mental-health-directory"
+  },
+  {
+    "id": "weather-app",
+    "photo": "/assets/imgs/works/2.jpg",
+    "title": "Weather App",
+    "tag": "Bilingual Weather Utility",
+    "link": "/project/weather-app"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6a4f4db6.css",
+    "main.js": "/static/js/main.0889ff6b.js",
+    "static/media/internship-1.webp": "/static/media/internship-1.8248e11997d38320f356.webp",
+    "static/media/vol4.webp": "/static/media/vol4.509d74b9edacd3f9e2cc.webp",
+    "static/media/internship-2.webp": "/static/media/internship-2.e1742d97e5b4bdb6aa00.webp",
+    "static/media/weather_app.png": "/static/media/weather_app.f5c220d876832f86abfb.png",
+    "static/media/Web_Development_Certificate.webp": "/static/media/Web_Development_Certificate.9a00c01188f10fdb094a.webp",
+    "static/media/Cert15.webp": "/static/media/Cert15.94bb3e9551053898a034.webp",
+    "static/media/Cert12.webp": "/static/media/Cert12.c1a494a26deae456c3d9.webp",
+    "static/media/Cert8.webp": "/static/media/Cert8.ac50a4d3f6870c413d3f.webp",
+    "static/media/vol5.webp": "/static/media/vol5.ad77ed7efe98afb22bff.webp",
+    "static/media/Alkhidmat_Certificate.webp": "/static/media/Alkhidmat_Certificate.dad355417af3b205a1e9.webp",
+    "static/media/Cert6.webp": "/static/media/Cert6.e473b17400dfacb5c2d0.webp",
+    "static/media/Cert7.webp": "/static/media/Cert7.423b77d4809ea827c3c1.webp",
+    "static/media/Cert11.webp": "/static/media/Cert11.6bcec531b7043e8a950b.webp",
+    "static/media/Cert14.webp": "/static/media/Cert14.d52cc51e8df44860132e.webp",
+    "static/media/Cert13.webp": "/static/media/Cert13.98c79dc58b20314e35e5.webp",
+    "static/media/Cert10.webp": "/static/media/Cert10.01aeff36152a998682a8.webp",
+    "static/media/Cert9.webp": "/static/media/Cert9.c5e9f6a7e81347438b0a.webp",
+    "static/media/Cert16.webp": "/static/media/Cert16.afbee27fb1dadefc10ca.webp",
+    "static/media/Cert3.webp": "/static/media/Cert3.3ecabee79c2fc76bd512.webp",
+    "static/media/Cert4.webp": "/static/media/Cert4.0d14fd573ff88f14d287.webp",
+    "static/media/Cert1.webp": "/static/media/Cert1.0109931d54dcaad9e64d.webp",
+    "static/media/Cert2.webp": "/static/media/Cert2.9c22844954e783c58ba3.webp",
+    "static/media/HHRD_Internship_Certificate_2023.webp": "/static/media/HHRD_Internship_Certificate_2023.37cfeb98c0c01879aca7.webp",
+    "static/media/mental-health.png": "/static/media/mental-health.4282846707e226f766b5.png",
+    "static/media/Cert5.webp": "/static/media/Cert5.f52de8387f1954564a8f.webp",
+    "static/media/vol3.webp": "/static/media/vol3.9de8a2f935ca59ed1d34.webp",
+    "static/media/vol1.webp": "/static/media/vol1.085975ff61d39dc22e2d.webp",
+    "static/media/vol2.webp": "/static/media/vol2.c2d6dc84213fc8001c1b.webp",
+    "index.html": "/index.html",
+    "main.6a4f4db6.css.map": "/static/css/main.6a4f4db6.css.map",
+    "main.0889ff6b.js.map": "/static/js/main.0889ff6b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a4f4db6.css",
+    "static/js/main.0889ff6b.js"
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "photo": "/assets/imgs/resume/1.png",
+    "title": "HTML",
+    "persent": "90%"
+  },
+  {
+    "photo": "/assets/imgs/resume/2.png",
+    "title": "CSS",
+    "persent": "80%"
+  },
+  {
+    "photo": "/assets/imgs/resume/3.png",
+    "title": "JavaScript",
+    "persent": "73%"
+  },
+  {
+    "photo": "/assets/imgs/resume/4.png",
+    "title": "React.js",
+    "persent": "70%"
+  },
+  {
+    "photo": "/assets/imgs/resume/5.png",
+    "title": "Figma",
+    "persent": "75%"
+  }
+]
