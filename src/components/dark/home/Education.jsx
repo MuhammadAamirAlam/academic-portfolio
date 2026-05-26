@@ -61,19 +61,16 @@ function Education() {
           top: 20px;
           right: 20px;
         }
+        @media screen and (max-width: 1024px) {
+          .edu-year-badge {
+            position: static !important;
+            margin-top: 8px;
+            margin-left: 0;
+            display: block !important;
+            width: fit-content !important;
+          }
+        }
         @media screen and (max-width: 767px) {
-  .edu-timeline-item .edu-year-badge {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    margin-bottom: 12px !important;
-    display: block !important;
-    width: fit-content !important;
-  }
-  .edu-logo {
-    margin-top: 12px !important;
-    margin-right: 12px !important;
-    margin-bottom: 8px !important;
     flex-shrink: 0 !important;
   }
 
@@ -191,7 +188,15 @@ function Education() {
           background: rgba(255,255,255,0.1);
           margin: 40px 0;
         }
-      `}</style>
+        @media screen and (max-width: 820px) {
+          .volunteer-card .edu-year-badge {
+            position: static !important;
+            margin-top: 8px;
+            margin-left: 0;
+            display: block !important;
+          }
+        }
+        `}</style>
 
       {}
       <div className="mb-40">
