@@ -63,24 +63,38 @@ function Education() {
         }
         @media screen and (max-width: 1024px) {
           .edu-year-badge {
-            position: static !important;
-            margin-top: 8px;
+            position: absolute !important;
+            top: 20px;
+            right: 20px;
+            margin-top: 0;
             margin-left: 0;
-            display: block !important;
+            display: inline-block !important;
             width: fit-content !important;
+          }
+          .edu-timeline-item .row {
+            position: relative;
           }
         }
         @media screen and (max-width: 767px) {
-    flex-shrink: 0 !important;
-  }
-
-  .edu-timeline-item .row {
-    flex-direction: column !important;
-  }
-  .edu-timeline-item .col-auto {
-    width: 100% !important;
-  }
-}
+          .edu-year-badge {
+            position: absolute !important;
+            top: 15px;
+            right: 10px;
+          }
+          .edu-timeline-item {
+            padding-top: 100px;
+          }
+        }
+        @media screen and (max-width: 480px) {
+          .edu-year-badge {
+            top: 15px;
+            right: 5px;
+          }
+          .edu-timeline-item {
+            padding-top: 60px;
+          }
+        }
+        }
         .edu-grade {
           background: transparent;
           border: 1px solid rgba(255,255,255,0.2);
