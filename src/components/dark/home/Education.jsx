@@ -1,5 +1,5 @@
 import React from "react";
-import alkhidmatCert from "../../../assets/certificates/Alkhidmat_Certificate.webp";
+import internshipLetter from "../../../assets/certificates/internship-1.webp";
 import hhrdCert from "../../../assets/certificates/HHRD_Internship_Certificate_2023.webp";
 
 function Education() {
@@ -174,15 +174,17 @@ function Education() {
           position: relative;
         }
         .lang-level-badge {
-          font-size: 12px;
+          font-size: 11px;
           padding: 3px 10px;
           border-radius: 30px;
-          border: 1px solid rgba(255,255,255,0.2);
-          background: rgba(255,255,255,0.04);
-          color: rgba(255,255,255,0.8);
+          border: 1px solid rgba(200, 243, 29, 0.2);
+          background: rgba(200, 243, 29, 0.05);
+          color: rgba(200, 243, 29, 0.85);
           position: absolute;
           top: 10px;
           right: 10px;
+          font-weight: 500;
+          transition: all 0.3s ease;
         }
         .section-divider {
           height: 1px;
@@ -355,12 +357,11 @@ function Education() {
         <div className="row g-4">
           {[
             {
-              role: "IT Officer",
-              organization: "Alkhidmat Hospital Charsadda (NGO)",
-              year: "2023 – Present",
-              description:
-                "Managing and supporting IT operations at a registered healthcare NGO.",
-              certificate: alkhidmatCert,
+              role: "Web Development Intern",
+              organization: "Digital Empowerment Network (DEN)",
+              year: "2025",
+              description: "Built web applications using JavaScript, HTML, and CSS under senior developer mentorship.",
+              certificate: internshipLetter,
             },
             {
               role: "Intern — Orphan Support Program",
@@ -391,7 +392,7 @@ function Education() {
                           fontWeight: 400,
                         }}
                       >
-                        {item.year}
+                        {item.year || item.duration}
                       </span>
                     </div>
                     <p className="opacity-8 fz-13 mb-2 fw-500">

@@ -210,6 +210,7 @@ function CertImage({
   priority = false,
 }) {
   const [failed, setFailed] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   return (
     <div
       style={{
@@ -221,6 +222,7 @@ function CertImage({
         flexShrink: 0,
       }}
     >
+      {!loaded && !failed && <div className="shimmer-loader" />}
       {failed ? (
         <div
           style={{
@@ -272,9 +274,12 @@ function CertImage({
             KhtmlUserDrag: "none",
             MozUserDrag: "none",
             OUserDrag: "none",
+            opacity: loaded ? 1 : 0,
+            transition: "opacity 0.3s ease-in-out",
           }}
           loading={priority ? "eager" : "lazy"}
-          fetchpriority={priority ? "high" : "auto"}
+          fetchPriority={priority ? "high" : "auto"}
+          onLoad={() => setLoaded(true)}
           onError={() => setFailed(true)}
           draggable={false}
         />
@@ -305,6 +310,22 @@ function Certifications() {
         }
         .tab-content-anim {
           animation: tabFadeIn 0.4s ease-out forwards;
+        }
+        @keyframes shimmer {
+          0% {
+            background-position: -200% 0;
+          }
+          100% {
+            background-position: 200% 0;
+          }
+        }
+        .shimmer-loader {
+          background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%);
+          background-size: 200% 100%;
+          animation: shimmer 1.5s infinite;
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          z-index: 1;
         }
         .cert-card {
           background: #1d1d1d;
@@ -555,12 +576,14 @@ function Certifications() {
         }}
       />
 
-      {categories.map((cat, catIndex) => (
-        <div
-          key={catIndex}
-          className="row tab-content-anim"
-          style={{ display: activeTab === cat.label ? "flex" : "none" }}
-        >
+      {categories.map((cat, catIndex) => {
+        if (activeTab !== cat.label) return null;
+        return (
+          <div
+            key={catIndex}
+            className="row tab-content-anim"
+            style={{ display: "flex" }}
+          >
           {cat.label === "Achievements" ? (
             cat.items.map((cert, i) => (
               <div key={i} className="col-lg-3 col-md-4 col-sm-6 col-12 mb-25">
@@ -732,7 +755,8 @@ function Certifications() {
             ))
           )}
         </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
