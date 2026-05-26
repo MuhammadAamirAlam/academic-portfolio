@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import diploma1 from "../../../assets/certificates/vol1.webp";
 import diploma2 from "../../../assets/certificates/vol2.webp";
 import internship1 from "../../../assets/certificates/internship-1.webp";
@@ -279,6 +279,7 @@ function CertImage({
           }}
           loading={priority ? "eager" : "lazy"}
           fetchPriority={priority ? "high" : "auto"}
+          decoding="async"
           onLoad={() => setLoaded(true)}
           onError={() => setFailed(true)}
           draggable={false}
@@ -291,6 +292,15 @@ function CertImage({
 function Certifications() {
   const [activeTab, setActiveTab] = useState("Achievements");
   const [lightbox, setLightbox] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  useEffect(() => {
+    setVisibleCount(4);
+    const timer = setTimeout(() => {
+      setVisibleCount(999);
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [activeTab]);
 
   return (
     <div
@@ -337,6 +347,8 @@ function Certifications() {
           flex-direction: column;
           transition: all 0.3s ease;
           cursor: default;
+          content-visibility: auto;
+          contain-intrinsic-size: 260px;
         }
         .cert-card:hover {
           border-color: var(--maincolor);
@@ -462,6 +474,8 @@ function Certifications() {
           flex-direction: column;
           transition: all 0.4s;
           cursor: default;
+          content-visibility: auto;
+          contain-intrinsic-size: 260px;
         }
         .diploma-card:hover {
           border-color: var(--maincolor);
@@ -585,7 +599,7 @@ function Certifications() {
             style={{ display: "flex" }}
           >
           {cat.label === "Achievements" ? (
-            cat.items.map((cert, i) => (
+            cat.items.slice(0, visibleCount).map((cert, i) => (
               <div key={i} className="col-lg-3 col-md-4 col-sm-6 col-12 mb-25">
                 <div className="diploma-card">
                   <CertImage
@@ -670,7 +684,7 @@ function Certifications() {
               </div>
             ))
           ) : (
-            cat.items.map((cert, i) => (
+            cat.items.slice(0, visibleCount).map((cert, i) => (
               <div key={i} className="col-lg-3 col-md-4 col-sm-6 col-12 mb-25">
                 <div className="cert-card">
                   <div className="cert-img">
