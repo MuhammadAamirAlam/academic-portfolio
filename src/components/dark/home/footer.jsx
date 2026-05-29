@@ -8,7 +8,7 @@ function Footer() {
           <div className="col-12">
             <div className="text-center">
               <p className="fz-13">
-                © 2025 Muhammad Aamir Alam. All Rights Reserved.
+                © 2026 Muhammad Aamir Alam. All Rights Reserved.
               </p>
             </div>
           </div>
