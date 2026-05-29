@@ -3,6 +3,27 @@ import internshipLetter from "../../../assets/certificates/internship-1.webp";
 import hhrdCert from "../../../assets/certificates/HHRD_Internship_Certificate_2023.webp";
 
 function Education() {
+  const educationData = [
+    {
+      year: "2022",
+      logo: "/assets/imgs/aps_logo.png",
+      degree: "Higher Secondary School Certificate — Computer Science",
+      institution: "Army Public School & College Attock Cantt",
+      board: "Federal Board of Intermediate & Secondary Education, Islamabad",
+      grade: "Grade: A1 — 81.72%",
+      subjects: ["Computer Science", "Mathematics", "Physics"]
+    },
+    {
+      year: "2020",
+      logo: "/assets/imgs/aps_logo.png",
+      degree: "Secondary School Certificate (SSC)",
+      institution: "Army Public School & College Attock Cantt",
+      board: "Federal Board of Intermediate & Secondary Education, Islamabad",
+      grade: "Grade: A1 — 83.45%",
+      subjects: ["Computer Science", "Mathematics", "Physics", "Chemistry"]
+    }
+  ];
+
   return (
     <div
       className="sec-box education section-padding bord-thin-bottom"
@@ -13,6 +34,7 @@ function Education() {
           position: relative;
           padding-left: 30px;
           margin-top: 20px;
+          font-family: inherit;
         }
         .edu-timeline::before {
           content: '';
@@ -35,7 +57,7 @@ function Education() {
           width: 12px;
           height: 12px;
           border-radius: 50%;
-          background: var(--maincolor);
+          background: #c8f31d; /* var(--maincolor) */
           border: 2px solid rgba(255,255,255,0.1);
           z-index: 2;
         }
@@ -63,24 +85,27 @@ function Education() {
         }
         @media screen and (max-width: 1024px) {
           .edu-year-badge {
-            position: static !important;
-            margin-top: 8px;
-            margin-left: 0;
-            display: block !important;
+            position: absolute !important;
+            top: 8px !important;
+            right: 8px !important;
+            margin: 0 !important;
+            display: inline-block !important;
             width: fit-content !important;
+            font-size: 11px !important;
+            padding: 3px 10px !important;
           }
         }
         @media screen and (max-width: 767px) {
-    flex-shrink: 0 !important;
-  }
-
-  .edu-timeline-item .row {
-    flex-direction: column !important;
-  }
-  .edu-timeline-item .col-auto {
-    width: 100% !important;
-  }
-}
+          .edu-logo {
+            flex-shrink: 0 !important;
+          }
+          .edu-timeline-item .row {
+            flex-direction: column !important;
+          }
+          .edu-timeline-item .col-auto {
+            width: 100% !important;
+          }
+        }
         .edu-grade {
           background: transparent;
           border: 1px solid rgba(255,255,255,0.2);
@@ -196,9 +221,20 @@ function Education() {
             display: block !important;
           }
         }
-        `}</style>
+        
+        /* Bootstrap utilities fallback styles in case target project does not have Bootstrap */
+        .fz-16 { font-size: 16px; }
+        .fw-500 { font-weight: 500; }
+        .fz-13 { font-size: 13px; }
+        .fz-12 { font-size: 12px; }
+        .mb-2 { margin-bottom: 8px; }
+        .mb-0 { margin-bottom: 0px; }
+        .opacity-8 { opacity: 0.8; }
+        .opacity-7 { opacity: 0.7; }
+        .gap-1 { gap: 4px; }
+        .gap-2 { gap: 8px; }
+      `}</style>
 
-      {}
       <div className="mb-40">
         <div className="row align-items-center">
           <div className="col-12">
@@ -216,104 +252,52 @@ function Education() {
 
       {}
       <div className="edu-timeline">
-        <div className="text-center mb-40"></div>
-
-        {}
-        <div className="edu-timeline-item">
-          <div>
-            <div className="edu-year-badge">2022</div>
-            <div className="row align-items-start g-3">
-              <div className="col-auto">
-                <img
-                  src="/assets/imgs/aps_logo.png"
-                  alt="APS Logo"
-                  className="edu-logo"
-                />
-              </div>
-              <div className="col">
-                <div className="mb-2">
-                  <h4 className="fz-16 fw-500 mb-2">
-                    Higher Secondary School Certificate — Computer Science
-                  </h4>
-                  <div className="d-flex flex-column gap-1 mb-2">
-                    <p className="opacity-8 fz-13 mb-0 fw-500">
-                      Army Public School & College Attock Cantt
-                    </p>
-                    <p className="opacity-7 fz-12 mb-0">
-                      Federal Board of Intermediate & Secondary Education,
-                      Islamabad
-                    </p>
-                  </div>
+        {educationData.map((item, index) => (
+          <div key={index} className="edu-timeline-item">
+            <div>
+              <div className="edu-year-badge">{item.year}</div>
+              <div className="row align-items-start g-3">
+                <div className="col-auto">
+                  <img
+                    src={item.logo}
+                    alt="Institution Logo"
+                    className="edu-logo"
+                  />
                 </div>
-
-                <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
-                  <div className="edu-grade">
-                    <span>Grade: A1 — 81.72%</span>
+                <div className="col">
+                  <div className="mb-2">
+                    <h4 className="fz-16 fw-500 mb-2">
+                      {item.degree}
+                    </h4>
+                    <div className="d-flex flex-column gap-1 mb-2">
+                      <p className="opacity-8 fz-13 mb-0 fw-500">
+                        {item.institution}
+                      </p>
+                      <p className="opacity-7 fz-12 mb-0">
+                        {item.board}
+                      </p>
+                    </div>
                   </div>
-                  <div className="d-flex flex-wrap gap-1">
-                    {["Computer Science", "Mathematics", "Physics"].map(
-                      (sub, i) => (
+
+                  {/* Grades and Subject Tags Area */}
+                  <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div className="edu-grade">
+                      <span>{item.grade}</span>
+                    </div>
+                    <div className="d-flex flex-wrap gap-1">
+                      {item.subjects.map((sub, i) => (
                         <span key={i} className="edu-subject-tag">
                           {sub}
                         </span>
-                      ),
-                    )}
+                      ))}
+                    </div>
                   </div>
+
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {}
-        <div className="edu-timeline-item">
-          <div>
-            <div className="edu-year-badge">2020</div>
-            <div className="row align-items-start g-3">
-              <div className="col-auto">
-                <img
-                  src="/assets/imgs/aps_logo.png"
-                  alt="APS Logo"
-                  className="edu-logo"
-                />
-              </div>
-              <div className="col">
-                <div className="mb-2">
-                  <h4 className="fz-16 fw-500 mb-2">
-                    Secondary School Certificate (SSC)
-                  </h4>
-                  <div className="d-flex flex-column gap-1 mb-2">
-                    <p className="opacity-8 fz-13 mb-0 fw-500">
-                      Army Public School & College Attock Cantt
-                    </p>
-                    <p className="opacity-7 fz-12 mb-0">
-                      Federal Board of Intermediate & Secondary Education,
-                      Islamabad
-                    </p>
-                  </div>
-                </div>
-
-                <div className="d-flex align-items-center justify-content-between flex-wrap gap-2">
-                  <div className="edu-grade">
-                    <span>Grade: A1 — 83.45%</span>
-                  </div>
-                  <div className="d-flex flex-wrap gap-1">
-                    {[
-                      "Computer Science",
-                      "Mathematics",
-                      "Physics",
-                      "Chemistry",
-                    ].map((sub, i) => (
-                      <span key={i} className="edu-subject-tag">
-                        {sub}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="section-divider"></div>

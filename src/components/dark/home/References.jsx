@@ -222,22 +222,6 @@ export default function References() {
           text-decoration: none;
         }
 
-        .refs-note {
-          background: #1d1d1d;
-          border: 1px solid rgba(255,255,255,0.08);
-          border-radius: 8px;
-          padding: 14px 18px;
-          display: flex;
-          gap: 12px;
-          align-items: flex-start;
-        }
-        .refs-note-text {
-          font-size: 12px;
-          color: rgba(255,255,255,0.45);
-          line-height: 1.9;
-          margin: 0;
-          font-style: italic;
-        }
       `}</style>
 
       <div className="refs-root">
@@ -336,53 +320,6 @@ export default function References() {
           })}
         </div>
 
-        {}
-        <div
-          className="refs-note"
-          style={{ borderLeft: "2px solid var(--main-color, currentColor)" }}
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 20 20"
-            fill="none"
-            style={{ flexShrink: 0, marginTop: 2 }}
-          >
-            <circle
-              cx="10"
-              cy="10"
-              r="9"
-              stroke="currentColor"
-              strokeWidth="1.2"
-              className="main-color"
-            />
-            <path
-              d="M10 9v5M10 7v.5"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              strokeLinecap="round"
-              className="main-color"
-            />
-          </svg>
-          <div>
-            <p
-              className="main-color"
-              style={{
-                fontSize: "11px",
-                fontWeight: 500,
-                marginBottom: 6,
-                letterSpacing: "0.3px",
-              }}
-            >
-              Note for Scholarship Committee
-            </p>
-            <p className="refs-note-text">
-              Both referees have formally consented and are prepared to provide
-              letters of recommendation for a fully funded scholarship
-              application upon request.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
