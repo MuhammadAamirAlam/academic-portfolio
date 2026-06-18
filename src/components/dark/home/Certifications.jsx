@@ -32,6 +32,7 @@ const categories = [
         issuer: "Digital Empowerment Network",
         image: internship1,
         link: null,
+        btnText: "View Offer Letter",
       },
     ],
   },
@@ -676,7 +677,7 @@ function Certifications() {
                         }}
                       >
                         <span>📄</span>
-                        <span>{cert.isDiploma === false ? "View Certificate" : "View Diploma"}</span>
+                        <span>{cert.btnText || (cert.isDiploma === false ? "View Certificate" : "View Diploma")}</span>
                       </div>
                     </div>
                   </div>
@@ -735,7 +736,7 @@ function Certifications() {
                             }}
                           >
                             <span>📄</span>
-                            <span>View Certificate</span>
+                            <span>{cert.btnText || "View Certificate"}</span>
                           </div>
                           <a
                             href={cert.link}
@@ -759,7 +760,7 @@ function Certifications() {
                           }}
                         >
                           <span>📄</span>
-                          <span>View Certificate</span>
+                          <span>{cert.btnText || "View Certificate"}</span>
                         </div>
                       )}
                     </div>

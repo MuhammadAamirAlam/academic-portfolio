@@ -351,6 +351,7 @@ function Education() {
               year: "2025",
               description: "Built web applications using JavaScript, HTML, and CSS under senior developer mentorship.",
               certificate: internshipLetter,
+              btnText: "View Offer Letter",
             },
             {
               role: "Intern — Orphan Support Program",
@@ -397,7 +398,7 @@ function Education() {
                       className="cert-link-btn"
                     >
                       <span>📄</span>
-                      <span>View Certificate</span>
+                      <span>{item.btnText || "View Certificate"}</span>
                     </a>
                   </div>
                 </div>
