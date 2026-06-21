@@ -347,7 +347,7 @@ function Education() {
           {[
             {
               role: "Web Development Intern",
-              organization: "Digital Empowerment Network (DEN)",
+              organization: "Digital Empowerment Network (DEN), Islamabad",
               year: "2025",
               description: "Built web applications using JavaScript, HTML, and CSS under senior developer mentorship.",
               certificate: internshipLetter,
