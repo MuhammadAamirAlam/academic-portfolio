@@ -162,9 +162,7 @@ const categories = [
       {
         title: "Diploma of High Achievement",
         subtitle: "Computer & Data Science",
-        issuer: "Open Doors — Global Universities Association",
-        number: "№ 2025-BT-COM-H209",
-        location: "Moscow, Russian Federation · 28.04.2026",
+        issuer: "Open Doors — Global Universities Association (Russian Federation)",
         image: diploma1,
         link: null,
         isDiploma: false,
@@ -172,9 +170,7 @@ const categories = [
       {
         title: "Diploma of High Achievement",
         subtitle: "Engineering & Technology",
-        issuer: "Open Doors — Global Universities Association",
-        number: "№ 2025-BT-ENG-H326",
-        location: "Moscow, Russian Federation · 28.04.2026",
+        issuer: "Open Doors — Global Universities Association (Russian Federation)",
         image: diploma2,
         link: null,
         isDiploma: false,
