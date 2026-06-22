@@ -148,7 +148,7 @@ const categories = [
     label: "Achievements",
     items: [
       {
-        title: "Letter of Acceptance(Scholarship)",
+        title: "Letter of Acceptance (Scholarship)",
         subtitle: "Bachelor's in Information Technology",
         issuer: "Universitas Bosowa, Indonesia",
         duration: "Sep 2026 - Aug 2030",
@@ -157,7 +157,7 @@ const categories = [
         image: loaAamir,
         link: null,
         isDiploma: false,
-        btnText: "View Letter",
+        btnText: "View Official Letter",
       },
       {
         title: "Diploma of High Achievement",
