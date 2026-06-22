@@ -22,6 +22,7 @@ import cert14 from "../../../assets/certificates/Cert14.webp";
 import cert15 from "../../../assets/certificates/Cert15.webp";
 import cert16 from "../../../assets/certificates/Cert16.webp";
 import webDevCert from "../../../assets/certificates/Web_Development_Certificate.webp";
+import loa from "../../../assets/certificates/LoA Muhammad Aamir Alam.webp";
 
 const categories = [
   {
@@ -147,10 +148,13 @@ const categories = [
     label: "Achievements",
     items: [
       {
-        title: "Web & Mobile App Development",
-        issuer: "Saylani Mass IT Training Program",
-        duration: "Nov 2024 - Mar 2026",
-        image: webDevCert,
+        title: "Letter of Acceptance",
+        subtitle: "Universitas Bosowa (UNIBOS), Indonesia",
+        duration: "Jun 2026",
+        description: "Admitted to B.Sc. Information Technology, Faculty of Engineering, with an International Student Scholarship covering full tuition and enrollment fees (2026–2030).",
+        image: loa,
+        buttonLabel: "View Acceptance Letter",
+        category: "Achievements",
         link: null,
         isDiploma: false,
       },
@@ -171,6 +175,14 @@ const categories = [
         number: "№ 2025-BT-ENG-H326",
         location: "Moscow, Russian Federation · 28.04.2026",
         image: diploma2,
+        link: null,
+        isDiploma: false,
+      },
+      {
+        title: "Web & Mobile App Development",
+        issuer: "Saylani Mass IT Training Program",
+        duration: "Nov 2024 - Mar 2026",
+        image: webDevCert,
         link: null,
         isDiploma: false,
       },
@@ -644,17 +656,42 @@ function Certifications() {
                     >
                       {cert.title || cert.subtitle}
                     </h5>
-                    <p
-                      style={{
-                        fontSize: "11px",
-                        color: "var(--maincolor)",
-                        marginBottom: "8px",
-                        fontWeight: "500",
-                        letterSpacing: "0.3px",
-                      }}
-                    >
-                      {cert.issuer}
-                    </p>
+                    {cert.title && cert.subtitle && (
+                      <p
+                        style={{
+                          fontSize: "11px",
+                          color: "rgba(255,255,255,0.7)",
+                          marginBottom: "4px",
+                        }}
+                      >
+                        {cert.subtitle}
+                      </p>
+                    )}
+                    {cert.issuer && (
+                      <p
+                        style={{
+                          fontSize: "11px",
+                          color: "var(--maincolor)",
+                          marginBottom: "8px",
+                          fontWeight: "500",
+                          letterSpacing: "0.3px",
+                        }}
+                      >
+                        {cert.issuer}
+                      </p>
+                    )}
+                    {cert.description && (
+                      <p
+                        style={{
+                          fontSize: "11px",
+                          color: "rgba(255,255,255,0.6)",
+                          marginBottom: "8px",
+                          lineHeight: "1.4",
+                        }}
+                      >
+                        {cert.description}
+                      </p>
+                    )}
                     {cert.duration && (
                       <p
                         style={{
@@ -677,7 +714,7 @@ function Certifications() {
                         }}
                       >
                         <span>📄</span>
-                        <span>{cert.btnText || (cert.isDiploma === false ? "View Certificate" : "View Diploma")}</span>
+                        <span>{cert.buttonLabel || cert.btnText || (cert.isDiploma === false ? "View Certificate" : "View Diploma")}</span>
                       </div>
                     </div>
                   </div>
