@@ -22,7 +22,6 @@ import cert14 from "../../../assets/certificates/Cert14.webp";
 import cert15 from "../../../assets/certificates/Cert15.webp";
 import cert16 from "../../../assets/certificates/Cert16.webp";
 import webDevCert from "../../../assets/certificates/Web_Development_Certificate.webp";
-import loa from "../../../assets/certificates/LoA Muhammad Aamir Alam.webp";
 
 const categories = [
   {
@@ -148,11 +147,10 @@ const categories = [
     label: "Achievements",
     items: [
       {
-        title: "Letter of Acceptance",
-        subtitle: "Bachelor's Degree Program in IT",
-        issuer: "Universitas Bosowa",
-        duration: "June 2026",
-        image: loa,
+        title: "Web & Mobile App Development",
+        issuer: "Saylani Mass IT Training Program",
+        duration: "Nov 2024 - Mar 2026",
+        image: webDevCert,
         link: null,
         isDiploma: false,
       },
@@ -173,14 +171,6 @@ const categories = [
         number: "№ 2025-BT-ENG-H326",
         location: "Moscow, Russian Federation · 28.04.2026",
         image: diploma2,
-        link: null,
-        isDiploma: false,
-      },
-      {
-        title: "Web & Mobile App Development",
-        issuer: "Saylani Mass IT Training Program",
-        duration: "Nov 2024 - Mar 2026",
-        image: webDevCert,
         link: null,
         isDiploma: false,
       },
