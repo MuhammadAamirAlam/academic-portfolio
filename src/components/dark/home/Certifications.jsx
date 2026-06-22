@@ -22,6 +22,7 @@ import cert14 from "../../../assets/certificates/Cert14.webp";
 import cert15 from "../../../assets/certificates/Cert15.webp";
 import cert16 from "../../../assets/certificates/Cert16.webp";
 import webDevCert from "../../../assets/certificates/Web_Development_Certificate.webp";
+import loaAamir from "../../../assets/certificates/LoA Muhammad Aamir Alam.webp";
 
 const categories = [
   {
@@ -147,12 +148,16 @@ const categories = [
     label: "Achievements",
     items: [
       {
-        title: "Web & Mobile App Development",
-        issuer: "Saylani Mass IT Training Program",
-        duration: "Nov 2024 - Mar 2026",
-        image: webDevCert,
+        title: "Letter of Acceptance(Scholarship)",
+        subtitle: "Bachelor's in Information Technology",
+        issuer: "Universitas Bosowa, Indonesia",
+        duration: "Sep 2026 - Aug 2030",
+        
+        
+        image: loaAamir,
         link: null,
         isDiploma: false,
+        btnText: "View Letter",
       },
       {
         title: "Diploma of High Achievement",
@@ -171,6 +176,14 @@ const categories = [
         number: "№ 2025-BT-ENG-H326",
         location: "Moscow, Russian Federation · 28.04.2026",
         image: diploma2,
+        link: null,
+        isDiploma: false,
+      },
+      {
+        title: "Web & Mobile App Development",
+        issuer: "Saylani Mass IT Training Program",
+        duration: "Nov 2024 - Mar 2026",
+        image: webDevCert,
         link: null,
         isDiploma: false,
       },
