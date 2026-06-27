@@ -1,6 +1,7 @@
 import React from "react";
 import internshipLetter from "../../../assets/certificates/internship-1.webp";
 import hhrdCert from "../../../assets/certificates/HHRD_Internship_Certificate_2023.webp";
+import alkhidmatCert from "../../../assets/certificates/Alkhidmat_Certificate.webp.webp";
 
 function Education() {
   const educationData = [
@@ -133,16 +134,20 @@ function Education() {
           padding: 20px;
           position: relative;
         }
-        .volunteer-card {
-          background: #1d1d1d;
-          border: 1px solid rgba(255,255,255,0.08);
-          border-radius: 10px;
-          padding: 18px;
-          margin-bottom: 16px;
-          position: relative;
-          transition: all 0.4s;
-          cursor: default;
-        }
+          .volunteer-card {
+            background: #1d1d1d;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 16px;
+            position: relative;
+            transition: all 0.4s;
+            cursor: default;
+          }
+          .volunteer-card .opacity-8,
+          .volunteer-card .opacity-7 {
+            text-align: left;
+          }
         .volunteer-card:hover {
           border-color: var(--maincolor);
         }
@@ -346,12 +351,11 @@ function Education() {
         <div className="row g-4">
           {[
             {
-              role: "Web Development Intern",
-              organization: "Digital Empowerment Network (DEN), Islamabad",
-              year: "2025",
-              description: "Built web applications using JavaScript, HTML, and CSS under senior developer mentorship.",
-              certificate: internshipLetter,
-              btnText: "View Offer Letter",
+              role: "IT Officer",
+              organization: "Alkhidmat Hospital, Charsadda",
+              year: "2023 - Present",
+              description: "My role focused on digital record-keeping and documentation management within the hospital's IT setup, maintaining patient data accuracy and supporting daily administrative operations for hospital staff.",
+              certificate: alkhidmatCert,
             },
             {
               role: "Intern — Orphan Support Program",
@@ -360,9 +364,16 @@ function Education() {
               description: "Contributed to community welfare initiatives under the Orphan Support Program (OSP).",
               certificate: hhrdCert,
             },
-            
+            {
+              role: "Web Development Intern",
+              organization: "Digital Empowerment Network (DEN), Islamabad",
+              year: "2025",
+              description: "Built web applications using JavaScript, HTML, and CSS under senior developer mentorship.",
+              certificate: internshipLetter,
+              btnText: "View Offer Letter",
+            },
           ].map((item, i) => (
-            <div key={i} className="col-lg-6 col-md-6">
+            <div key={i} className="col-lg-4 col-md-6">
               <div className="volunteer-card h-100">
                 <div className="d-flex flex-column h-100">
                   <div className="flex-grow-1">
