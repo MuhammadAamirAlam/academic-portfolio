@@ -1,8 +1,6 @@
 import React from "react";
 import internshipLetter from "../../../assets/certificates/internship-1.webp";
 import hhrdCert from "../../../assets/certificates/HHRD_Internship_Certificate_2023.webp";
-import alkhidmatCert from "../../../assets/certificates/Alkhidmat_Certificate.webp.webp";
-
 function Education() {
   const educationData = [
     {
